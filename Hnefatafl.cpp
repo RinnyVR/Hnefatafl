@@ -31,9 +31,31 @@ void Display(Matrice& a)
     }
 }
 
+void LoadingDisplay()
+{
+    int ok=0;
+    system("CLS");
+    system("Color A");
+    cout<<"Dimention Confirmed"<<endl;
+    _sleep(4000);
+    system("CLS");
+    _sleep(4000);
+    cout<<"Initializing Board."<<endl;
+    system("CLS");
+    _sleep(4000);
+    cout<<"Initializing Board.."<<endl;
+    system("CLS");
+    _sleep(4000);
+    cout<<"Initializing Board..."<<endl;
+    system("CLS");
+    _sleep(4000);
+}
+
+void 
+
 void InitializeBoardPeices(Matrice& a)
 {
-
+    
 }
 
 int main()
@@ -42,16 +64,14 @@ int main()
     Matrice a{};
     cout<<"Write Down Board Dimention! Option are 11 or 9 squares board."<<endl;
     cin>>a.n;
-    while (a.n !=11 && a.n !=7 )
+    while (a.n !=11 && a.n !=9 )
     {    
         system("Color C");
          cout<<"Dimention Not Valid"<<endl;
          cout<<"Please Write Down Board Dimention Either 11 or 9"<<endl;
          cin>>a.n;
     }
-    system("Color A");
-    cout<<"Dimention Confirmed"<<endl;
-    _sleep(5000);
+    LoadingDisplay();
     BoardGameInitiallise(a);
     Display(a);
     /*system("Color C");
