@@ -3,16 +3,21 @@
 #include <stdlib.h>
 #include <dos.h>
 
-
 using namespace std;
 
+
+//STRUCTURE OF THE BOARD
 struct Matrice
 {
     int n;
     int elem[11][11];
 };
 
-void BoardGameInitiallise(Matrice& a)
+
+
+//BEGINING OF THE PROGRAM SUBPROGRAMS CATEGORY
+
+void BoardGameInitiallise(Matrice& a) //CREATE THE BOARD GAME //DONE
 {
     int i,j;
     for (i = 1; i <= a.n; i++)
@@ -20,7 +25,45 @@ void BoardGameInitiallise(Matrice& a)
             a.elem[i][j] = 0;
 }
 
-void Display(Matrice& a)
+void InitializeBoardPeices(Matrice& a)//
+{
+//...    
+}
+
+void LoadingDisplay() //ANIMATION LOADINg SCREEN //DONE
+{
+    system("CLS");
+    system("Color A");
+    cout<<"Dimention Confirmed";
+    _sleep(2000);
+    system("CLS");
+    cout<<"Initializing Board.";
+    _sleep(3000);
+    system("CLS");
+    cout<<"Initializing Board..";
+    _sleep(3000);
+    system("CLS");
+    cout<<"Initializing Board...";
+    _sleep(3000);
+    system("CLS");
+    cout<<"Initializing Pieces.";
+    _sleep(2000);
+    system("CLS");
+    cout<<"Initializing Pieces..";
+    _sleep(2000);
+    system("CLS");
+    cout<<"Initializing Pieces...";
+    _sleep(2000);
+    system("CLS");
+    cout<<"Process Completed!";
+    _sleep(1000);
+    system("CLS");
+}
+
+
+//REPETITIVE FUNCTIONS SUBPROGRAMS IN GAME
+
+void Display(Matrice& a) //DISPLAY GAME BOARD //DONE
 {   
     int i,j;
     for(i = 1; i <= a.n; i++)
@@ -31,32 +74,24 @@ void Display(Matrice& a)
     }
 }
 
-void LoadingDisplay()
+//RULE BOOK
+
+void RecallMenu() //HELPING GUIDE ON REPRESENTING PEICES/RULES  
 {
-    int ok=0;
-    system("CLS");
-    system("Color A");
-    cout<<"Dimention Confirmed"<<endl;
-    _sleep(4000);
-    system("CLS");
-    _sleep(4000);
-    cout<<"Initializing Board."<<endl;
-    system("CLS");
-    _sleep(4000);
-    cout<<"Initializing Board.."<<endl;
-    system("CLS");
-    _sleep(4000);
-    cout<<"Initializing Board..."<<endl;
-    system("CLS");
-    _sleep(4000);
+    cout<<"Welcome to the guide!"<<endl<<"Introduce 1 to see the Representetive numbers on phone"<<"And for the rules press 2"<<endl;
 }
 
-void 
-
-void InitializeBoardPeices(Matrice& a)
+void FirstPage()
 {
-    
+
 }
+
+void SecondPage()
+{
+
+}
+
+
 
 int main()
 {
@@ -73,6 +108,7 @@ int main()
     }
     LoadingDisplay();
     BoardGameInitiallise(a);
+    system("Color F")
     Display(a);
     /*system("Color C");
     cout<<"LET THE GAME BEGIN"<<endl;
