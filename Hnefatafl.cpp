@@ -108,7 +108,7 @@ int main()
     }
     LoadingDisplay();
     BoardGameInitiallise(a);
-    system("Color F")
+    system("Color F");
     Display(a);
     /*system("Color C");
     cout<<"LET THE GAME BEGIN"<<endl;
